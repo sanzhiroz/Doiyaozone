@@ -1,0 +1,12 @@
+{
+  "projectId": "medical-practice-log",
+  "appId": "1:586651650138:web:450b73dc211adbae163063",
+  "apiKey": "AIzaSyAOc9bjQFMBDQydntEKNUrX-4JPRHdHBIM",
+  "authDomain": "medical-practice-log.firebaseapp.com",
+  "firestoreDatabaseId": "ai-studio-nodemedicalpract-b85e744b-2389-4b95-bcd7-8f34325cbdc6",
+  "storageBucket": "medical-practice-log.firebasestorage.app",
+  "messagingSenderId": "586651650138",
+  "measurementId": "",
+  "oAuthClientId": "586651650138-vvqcvettdfdvg5ulld73t2urbmds9kha.apps.googleusercontent.com",
+  "recaptchaSiteKey": ""
+}

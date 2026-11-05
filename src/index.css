@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Prompt', 'Sarabun', sans-serif;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* TH Sarabun typography for Thai Government Reports */
+.font-sarabun {
+  font-family: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+}
+
+/* Lively animated white light wave passing across bar charts */
+@keyframes whiteShimmerSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  60%, 100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-white-shimmer {
+  animation: whiteShimmerSweep 2.4s infinite ease-in-out;
+}
+
+/* Smooth continuous rotation for PAO Chiang Mai Logo */
+@keyframes gentleSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: gentleSpin 18s linear infinite;
+}
+
+.animate-spin-slow:hover {
+  animation-duration: 9s;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;   /* กำหนดขนาดกระดาษ A4 แนวตั้ง */
+    margin-top: 2cm;     /* ขอบบน 2 ซม. */
+    margin-right: 2.5cm; /* ขอบขวา 2.5 ซม. */
+    margin-bottom: 2cm;  /* ขอบล่าง 2 ซม. */
+    margin-left: 3cm;    /* ขอบซ้าย 3 ซม. (ตามระเบียบงานสารบรรณ) */
+  }
+
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ซ่อนส่วนที่ไม่ต้องการให้พิมพ์ เช่น เมนู หรือปุ่มต่างๆ */
+  no-print,
+  .no-print,
+  header,
+  footer,
+  .navbar,
+  nav,
+  aside,
+  form,
+  button,
+  input,
+  select {
+    display: none !important;
+  }
+
+  html, body {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* ให้เหลือเฉพาะ container ของเอกสาร #print-area เต็มความกว้างหน้ากระดาษ ไม่มีเงา ไม่มีขอบ แผ่นแรกแผ่นเดียว */
+  #print-area {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 257mm !important; /* 297mm - 40mm (ขอบบน 2cm + ขอบล่าง 2cm) */
+    margin: 0 !important;
+    padding: 0 !important; /* ระยะขอบกระดาษกำหนดที่ @page */
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    color: #000000 !important;
+    overflow: hidden !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  #print-area table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  #print-area tr,
+  #print-area td,
+  #print-area th {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  #print-area .signatures {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
+
+

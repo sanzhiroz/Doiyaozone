@@ -1,0 +1,6 @@
+{
+  "name": "บันทึกการปฏิบัติงานของแพทย์ Node ดอยยาว (Medical Practice Log – Doi Yao)",
+  "description": "ระบบบันทึกข้อมูลการปฏิบัติงานของแพทย์ Node ดอยยาว ในสังกัด องค์การบริหารส่วนจังหวัดเชียงใหม่ สรุปข้อมูลรายงานพร้อมแสดงผลกราฟและรูปแบบ Google Sheet",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
